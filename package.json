@@ -1,28 +1,15 @@
+
 {
   "name": "botoptium",
   "version": "0.0.1",
-  "description": "A bot for Discord",
-  "author": "Xeta <zoro.fmt@gmail.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Xety/Discord-Bot"
-  },
-  "bugs": {
-    "url": "https://github.com/Xety/Discord-Bot/issues"
-  },
-  "keywords": [
-    "discord",
-    "bot",
-    "discordapp"
-  ],
-  "license": "MIT",
   "main": "index.js",
-  
+  "scripts": {
+    "start": "node index.js"
   },
   "dependencies": {
-    "discord.js": "*",
-    "youtube-node": "1.2.x",
-    "query-string": "3.*",
-    "request": ">=2.58.0"
+    "eris": "^0.7.2"
+  },
+  "engines": {
+    "node": "8.x"
   }
 }
