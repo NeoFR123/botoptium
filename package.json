@@ -1,8 +1,7 @@
 {
-  "name": "Discord-Bot",
+  "name": "botoptium",
   "version": "0.0.1",
   "description": "A bot for Discord",
-  "readme": "README.md",
   "author": "Xeta <zoro.fmt@gmail.com>",
   "repository": {
     "type": "git",
@@ -18,8 +17,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "directories": {
-    "lib": "./lib"
+  
   },
   "dependencies": {
     "discord.js": "*",
