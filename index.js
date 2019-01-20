@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 
 var bot = new Discord.Client();
-var prefix = (";");
+var prefix = ("/");
 
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: 'Assister la OpTium', type: 0} });
+    bot.user.setPresence({ game: { name: 'faire /beta-test', type: 0} });
     console.log("Bot Ready !");
 });
 
@@ -38,7 +38,7 @@ bot.on('message', message => {
 //LINK
 
 
-    if (message.content === prefix + `link PC ${message.author.username}`){
+    if (message.content === prefix + `link PC ${member}`){
         var help_embed = new Discord.RichEmbed()
             .setColor('#0BD72F')
             .addField("__Link {PC}__" , "Votre **link** à bien était effectué !  \n Vous pouvez maintenant voir vos stats => ;stats !")
@@ -47,7 +47,7 @@ bot.on('message', message => {
         console.log("Commande Help demandée !");
     }
 
-    if (message.content === prefix + `link PS4 ${message.author.username}`){
+    if (message.content === prefix + `link PS4 ${member}`){
         var help_embed = new Discord.RichEmbed()
             .setColor('#0BD72F')
             .addField("__Link {PS4}__" , "Votre **link** à bien était effectué ! \n Vous pouvez maintenant voir vos stats => ;stats !")
@@ -56,7 +56,7 @@ bot.on('message', message => {
         console.log("Commande Help demandée !");
     }
 
-    if (message.content === prefix + `link ${message.author.username}`){
+    if (message.content === prefix + `link ${member}`){
         var help_embed = new Discord.RichEmbed()
             .setColor('#EC1016')
             .addField("__Link {PC ou PS4}__" , "Veuillez préciser votre platforme !")
@@ -92,24 +92,6 @@ bot.on('message', message => {
         console.log("Commande Help demandée !");
     }
 
-    if (message.content === prefix + `site`){
-        var help_embed = new Discord.RichEmbed()
-            .setColor('#C5370A')
-            .addField("__Développeur du bot__" , "Votre **développeur** a un site à vous montrez ! \n http://neo-production.fr/ ")
-        message.channel.sendEmbed(help_embed);
-        //messagechannel
-        console.log("Commande Help demandée !");
-    }
-
-    if (message.content === prefix + `mardi`){
-        var help_embed = new Discord.RichEmbed()
-            .setColor('#C5370A')
-            .addField("__Recrutement(s) OpTium__" , "Les **tests** vont commencer dans la journée !")
-        message.channel.sendEmbed(help_embed);
-        //messagechannel
-        console.log("Commande Help demandée !");
-    }
-
 
 //STATS
 
@@ -128,14 +110,14 @@ bot.on('message', message => {
         var stats_embed = new Discord.RichEmbed()
 
         .setColor("#EC1016")
-        .setTitle(`Statistiques de l'utilisateur : ${message.author.username}`)
+        .setTitle(`Statistiques de l'utilisateur : ${member}`)
         .addField(`Maintenance ...`, "C'est une commande en cours de développement juste l'id est envoyé !")
         .addField(`ID de l'utilisateur :id:`, msauthor, true)
         .setThumbnail(message.author.avatarURL)
         message.author.send({embed : stats_embed});
         break;
                      //PING
-                     case "clear":
+                     case "efefefefefefef":
                      if (message.member.hasPermission("MANAGE_MESSAGES")){
                          message.channel.fetchMessages()
                              .then(function(list){
